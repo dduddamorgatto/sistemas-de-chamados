@@ -33,8 +33,7 @@ Permite abrir, acompanhar e gerenciar chamados de suporte, com painel administra
 
 ## 📸 Preview
 
-> _Adicione aqui um print ou GIF do sistema funcionando — recrutadores adoram ver antes de clonar o repositório._
-
+[Preview](./public/screenshots/lista-chamados.png)
 ---
 
 ## 🔧 Como rodar o projeto
