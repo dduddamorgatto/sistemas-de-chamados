@@ -1,42 +1,128 @@
-# sistemas-de-chamadas
+# 🛠️ Sistema de Chamados (Help Desk)
 
-This template should help get you started developing with Vue 3 in Vite.
+Sistema de gerenciamento de chamados de suporte técnico, desenvolvido como projeto de portfólio com foco em vagas Vue.js.
 
-## Recommended IDE Setup
+Permite abrir, acompanhar e gerenciar chamados de suporte, com painel administrativo, filtros avançados e busca em tempo real.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## ✨ Funcionalidades
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- 🎫 Abertura de chamados com validação completa de formulário
+- 🔍 Filtros por status, prioridade e categoria
+- 🔎 Busca em tempo real por título e descrição
+- 📊 Painel administrativo com estatísticas por status
+- 🔄 Alteração de status do chamado (admin)
+- 📄 Página de detalhe individual de cada chamado
+- 💾 Persistência local via `localStorage` — arquitetura pronta para integração com API
+- 📱 Layout responsivo
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🚀 Tecnologias
 
-## Customize configuration
+| Tecnologia | Uso no projeto |
+|---|---|
+| **Vue 3** | Composition API com `<script setup>` |
+| **TypeScript** | Tipagem estática em toda a aplicação |
+| **Pinia** | Gerenciamento de estado centralizado |
+| **Vue Router** | Navegação entre telas, incluindo rotas dinâmicas |
+| **Vite** | Build tool e dev server |
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 📸 Preview
 
-```sh
+> _Adicione aqui um print ou GIF do sistema funcionando — recrutadores adoram ver antes de clonar o repositório._
+
+---
+
+## 🔧 Como rodar o projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/dduddamorgatto/sistemas-de-chamados.git
+
+# Entre na pasta
+cd sistema-de-chamados
+
+# Instale as dependências
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Rode em ambiente de desenvolvimento
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+# Build de produção
 npm run build
 ```
+
+O projeto estará disponível em `http://localhost:5173`
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+src/
+├── components/         # Componentes reutilizáveis
+│   ├── TicketCard.vue      # Card individual de chamado
+│   ├── TicketForm.vue      # Formulário de abertura com validação
+│   ├── TicketList.vue      # Lista com filtros e busca
+│   └── StatusBadge.vue     # Badge de status/prioridade
+├── views/              # Páginas/telas
+│   ├── TicketsView.vue       # Listagem principal
+│   ├── NovoTicketView.vue    # Abertura de chamado
+│   ├── TicketDetailView.vue  # Detalhe do chamado
+│   ├── AdminPanel.vue        # Painel administrativo
+│   └── NotFoundView.vue      # Página 404
+├── stores/              # Pinia stores
+│   └── ticketStore.ts       # Estado central de chamados
+├── types/               # Tipos TypeScript
+│   └── ticket.ts            # Interfaces e enums
+├── router/               # Configuração de rotas
+│   └── index.ts
+├── App.vue
+└── main.ts
+```
+
+---
+
+## 🧠 Decisões técnicas
+
+**Pinia com Composition API (setup stores)**
+Escolhido por ser o padrão recomendado oficialmente pela documentação do Vue, com melhor inferência de tipos TypeScript em comparação com Options API stores.
+
+**localStorage como persistência temporária**
+Simula o comportamento de um backend real. A arquitetura foi pensada para que a troca futura por chamadas HTTP exija alteração apenas na store — os componentes não precisam mudar, já que só conversam com a store.
+
+**Rotas dinâmicas com Vue Router**
+A tela de detalhe (`/chamados/:id`) usa parâmetros de rota com `props: true`, mantendo os componentes desacoplados do sistema de roteamento.
+
+**Geração de ID com timestamp**
+Solução simples e suficiente para o escopo do MVP. Em produção, seria substituída por UUID gerado no backend.
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Conectar com backend Node.js + Express
+- [ ] Autenticação de usuários (JWT)
+- [ ] Comentários e histórico de interações no chamado
+- [ ] Upload de anexos
+- [ ] Notificações por e-mail
+- [ ] Testes unitários com Vitest
+- [ ] Dark mode
+
+---
+
+## 👤 Autora
+
+Desenvolvido por **Maria Eduarda**
+
+[LinkedIn](https://www.linkedin.com/in/maria-eduarda-morgatto-machado) • [GitHub](https://github.com/dduddamorgatto)
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT — sinta-se livre para usar como referência de estudo.
