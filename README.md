@@ -33,7 +33,13 @@ Permite abrir, acompanhar e gerenciar chamados de suporte, com painel administra
 
 ## 📸 Preview
 
-[Preview](./public/screenshots/lista-chamados.png)
+[Preview](./public/screenshots/preview1.png) 
+[Preview2](./public/screenshots/preview2.png)
+[Preview3](./public/screenshots/preview3.png) 
+[Preview4](./public/screenshots/preview4.png) 
+[Preview5](./public/screenshots/preview5.png) 
+[Preview6](./public/screenshots/preview6.png)
+[Preview7](./public/screenshots/preview7.png)
 ---
 
 ## 🔧 Como rodar o projeto
