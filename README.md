@@ -124,7 +124,7 @@ Solução simples e suficiente para o escopo do MVP. Em produção, seria substi
 
 Desenvolvido por **Maria Eduarda**
 
-[LinkedIn]([https://www.linkedin.com/in/maria-eduarda-morgatto-machado](https://www.linkedin.com/feed)) • [GitHub](https://github.com/dduddamorgatto)
+[LinkedIn](https://www.linkedin.com/feed) • [GitHub](https://github.com/dduddamorgatto)
 
 ---
 
